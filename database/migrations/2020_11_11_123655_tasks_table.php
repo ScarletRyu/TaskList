@@ -16,6 +16,7 @@ class TasksTable extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->foreign('user_id')->references('id')->on('User')->onDelete('cascade');
             $table->timestamps();
         });
     }

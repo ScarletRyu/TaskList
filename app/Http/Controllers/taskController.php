@@ -12,7 +12,7 @@ class taskController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index() 
     {
         $task = \App\Models\Tasks::all();
         return view('welcome', ['newtasks' => $task]);

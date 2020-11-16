@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'taskController@index');
 
 Route::resource('tasks', 'taskController')->only('index', 'store', 'destroy');
+
+Route::get('createuser/{id}', 'Controller@store')->name('createproduct');
