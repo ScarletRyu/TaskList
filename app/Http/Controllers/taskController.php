@@ -34,8 +34,10 @@ class taskController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreTaskPost $request)
     {
+        //validacion
+        $request = $request->validated();
         // Creo un nuevo objeto 'task'
         $task = new Tasks;
         // Guardo cada parametro del formulario en el respectivo campo del objeto
